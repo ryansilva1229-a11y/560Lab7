@@ -21,3 +21,23 @@ This project is a child safety monitoring system that tracks mobile devices in r
 ```
 
 ## Setup
+### System Dependencies:
+```
+ThingsBoard: http://18.117.119.232:8080
+OwnTracks: install on each device to be tracked
+```
+
+### Python Dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+## How It Works
+
+1. OwnTracks runs on each mobile device and publishes telemetry to the ThingsBoard server. 
+2. ThingsBoard ingests and stores the telemetry data, making it accessible via REST API.
+3. The dashboard on ThingsBoard displays real-time device information. 
+4. Python script (NAME OF SCRIPT) fetches the latest telemetry for each registered device through ThingsBoard and runs it through a set of alert rules.
+5. If a condition is triggered, an email notification is sent.
+6. Alert deduplication ensures each alert is only sent once per incident and resets automatically when the condition clears.
