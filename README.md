@@ -12,10 +12,7 @@ This project is a child safety monitoring system that tracks mobile devices in r
 560-Lab-6/
 │
 ├── Scripts/
-│   ├── 
-│   ├── 
-│   └── 
-│
+│   └── alerts.py
 ├── requirements.txt
 └── README.md
 ```
@@ -38,6 +35,6 @@ pip install -r requirements.txt
 1. OwnTracks runs on each mobile device and publishes telemetry to the ThingsBoard server. 
 2. ThingsBoard ingests and stores the telemetry data, making it accessible via REST API.
 3. The dashboard on ThingsBoard displays real-time device information. 
-4. Python script (NAME OF SCRIPT) fetches the latest telemetry for each registered device through ThingsBoard and runs it through a set of alert rules.
+4. Python script (alerts.py) fetches the latest telemetry for each registered device through ThingsBoard and runs it through a set of alert rules.
 5. If a condition is triggered, an email notification is sent.
 6. Alert deduplication ensures each alert is only sent once per incident and resets automatically when the condition clears.
