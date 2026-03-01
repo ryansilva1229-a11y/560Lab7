@@ -36,5 +36,5 @@ pip install -r requirements.txt
 2. ThingsBoard ingests and stores the telemetry data, making it accessible via REST API.
 3. The dashboard on ThingsBoard displays real-time device information. 
 4. Python script (alerts.py) fetches the latest telemetry for each registered device through ThingsBoard and runs it through a set of alert rules.
-5. If a condition is triggered, an email notification is sent.
+5. If a condition is triggered, an alert is sent to the dashboard.
 6. Alert deduplication ensures each alert is only sent once per incident and resets automatically when the condition clears.
